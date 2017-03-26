@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "start": "neutrino start --use neutrino-preset-react",
+    "build": "neutrino build --use neutrino-preset-react"
+  },
+  "devDependencies": {
+    "neutrino": "^5.0.0",
+    "neutrino-preset-react": "^5.0.0"
+  },
+  "dependencies": {
+    "cf-component-code": "^2.2.0",
+    "cf-component-tabs": "^5.2.0",
+    "lodash.isarray": "^4.0.0",
+    "lodash.isobject": "^3.0.2",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
+}
