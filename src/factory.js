@@ -19,7 +19,7 @@ export default {
         require.ensure(
           [],
           require => {
-            const CodeComponent = require('./code').default;
+            const CodeComponent = require('./CodeComponent').default;
             modules[key] = CodeComponent;
             resolve(CodeComponent);
           },
@@ -37,7 +37,7 @@ export default {
         require.ensure(
           [],
           require => {
-            const TabsComponent = require('./tabs').default;
+            const TabsComponent = require('./TabsComponent').default;
             modules[key] = TabsComponent;
             resolve(TabsComponent);
           },
