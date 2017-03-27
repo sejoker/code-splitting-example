@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { render } from "react-dom";
 import EntryFactory from "../EntryFactory";
 import { moduleCode, moduleTabs, moduleEmpty } from "../modules";
+import { ButtonGroup, Button } from "cf-component-button";
 
 export default class App extends Component {
   constructor(props) {
@@ -16,13 +17,15 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <h2>Components code-splitting example</h2>
-        <button onClick={this.loadCodeModule}>
-          Load code component
-        </button>
-        <button onClick={this.loadTabsModule}>
-          Load tabs component
-        </button>
+        <h2>Code-splitting example</h2>
+        <ButtonGroup>
+          <Button type="primary" onClick={this.loadCodeModule}>
+            Load code component
+          </Button>
+          <Button type="default" onClick={this.loadTabsModule}>
+            Load tabs component
+          </Button>
+        </ButtonGroup>
         <EntryFactory module={this.state.module} />
       </div>
     );
