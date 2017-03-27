@@ -1,6 +1,5 @@
-import contentTypes, { promises as modulePromises } from './factory';
-import isArray from 'lodash.isarray';
-import isObject from 'lodash.isobject';
+import contentTypes, { promises as modulePromises } from "./factory";
+import isObject from "lodash.isobject";
 
 export default function fetchAll(module, store) {
   fetchDependencies(module, store, callContentTypes);
@@ -24,7 +23,7 @@ export function fetchDependencies(obj, store, doAction) {
 
     const value = obj[key];
 
-    if (isArray(value)) {
+    if (Array.isArray(value)) {
       value.forEach(item => fetchDependencies(item, store, doAction));
     } else if (isObject(value)) {
       fetchDependencies(value, store, doAction);
