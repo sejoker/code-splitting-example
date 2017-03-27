@@ -1,4 +1,8 @@
 {
+  "name": "code-splitting-example",
+  "version": "1.0.0",
+  "author": "Yevgen Safronov sejoker@gmail.com",
+  "license": "MIT",
   "scripts": {
     "start": "neutrino start --use neutrino-preset-react",
     "build": "neutrino build --use neutrino-preset-react"
