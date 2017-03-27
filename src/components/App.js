@@ -16,7 +16,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <h1>Hacks: React!</h1>
+        <h2>Components code-splitting example</h2>
         <button onClick={this.loadCodeModule}>
           Load code component
         </button>
