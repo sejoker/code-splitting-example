@@ -1,0 +1,45 @@
+.cf-tabs {
+    border-radius: 3px
+}
+
+.cf-tabs__group {
+    display: table;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    table-layout: fixed
+}
+
+.cf-tabs__item {
+    display: table-cell;
+    padding: 1em;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, .2)
+}
+
+.cf-tabs__item:first-child {
+    border-top-left-radius: 3px
+}
+
+.cf-tabs__item:last-child {
+    border-top-right-radius: 3px
+}
+
+.cf-tabs__item+.cf-tabs__item {
+    border-left: 0
+}
+
+.cf-tabs__item--active {
+    background: #fff;
+    border-bottom: 0
+}
+
+.cf-tabs__panel {
+    background: #fff;
+    padding: 2em;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-top: 0!important;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px
+}

@@ -1,0 +1,26 @@
+
+.cf-code,
+code {
+    display: inline-block;
+    font-family: monaco, Consolas, Lucida Console, monospace;
+    font-size: .9em;
+    background: #ddd;
+    color: #434148;
+    border-radius: 2px;
+    padding: .05em .3em
+}
+
+.cf-code__block {
+    border: 1px solid #bbb;
+    background: #ddd;
+    padding: .5em 1em;
+    border-radius: 2px
+}
+
+.cf-code__block .cf-code {
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 0;
+    border-radius: 0
+}
