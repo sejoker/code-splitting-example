@@ -1,8 +1,8 @@
-import React from "react";
+import React, { Component } from "react";
 import { Tabs, TabsPanel } from "cf-component-tabs";
 import "./tabs.css";
 
-class TabsComponent extends React.Component {
+class TabsComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {

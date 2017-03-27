@@ -15,18 +15,11 @@ export default {
     const key = "code";
     if (modules[key]) return modules[key];
     if (!promises[key]) {
-      promises[key] = new Promise(resolve => {
-        require.ensure(
-          [],
-          require => {
-            const CodeComponent = require(
-              "./components/code/CodeComponent"
-            ).default;
-            modules[key] = CodeComponent;
-            resolve(CodeComponent);
-          },
-          "code"
-        );
+      promises[key] = import(
+        "./components/code/CodeComponent"
+      ).then(CodeComponent => {
+        modules[key] = CodeComponent.default;
+        return CodeComponent.default;
       });
     }
     return promises[key];

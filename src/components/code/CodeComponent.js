@@ -1,8 +1,8 @@
-import React from "react";
+import React, { Component } from "react";
 import { Code, CodeBlock } from "cf-component-code";
 import "./code.css";
 
-class CodeComponent extends React.Component {
+class CodeComponent extends Component {
   render() {
     return (
       <div>
