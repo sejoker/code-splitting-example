@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "start": "neutrino start --use neutrino-preset-react",
-    "build": "neutrino build --use neutrino-preset-react"
+    "build": "neutrino build --use neutrino-preset-react",
+    "api": "json-server ./src/api/db.json --watch --routes ./src/api/routes.json"
   },
   "devDependencies": {
     "neutrino": "^5.0.0",
@@ -15,9 +16,12 @@
     "cf-component-button": "^3",
     "cf-component-code": "^2.2.0",
     "cf-component-tabs": "^5.2.0",
+    "history": "^3.0.0",
+    "json-server": "^0.9.6",
     "lodash.isobject": "^3.0.2",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "react-router": "^3.0.0"
   },
   "privage": true
 }
