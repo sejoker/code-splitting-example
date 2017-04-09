@@ -1,0 +1,5 @@
+{
+  "/api/code": "/modules/code",
+  "/api/tabs": "/modules/tabs",
+  "/api/": "/modules/home"
+}

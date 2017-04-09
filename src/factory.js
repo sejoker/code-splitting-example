@@ -1,4 +1,6 @@
 import React from "react";
+import Link from './components/link/LinkComponent';
+import Page from './components/page/PageComponent';
 
 export const promises = {};
 
@@ -44,5 +46,7 @@ export default {
     }
     return promises[key];
   },
-  default: () => () => <div />
+  link: () => Link,
+  page: () => Page,
+  default: () => () => <div />,
 };

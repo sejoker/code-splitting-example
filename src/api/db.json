@@ -1,0 +1,41 @@
+{
+  "modules": [
+    {
+      "id": "code",
+      "content_type": "page",
+      "items": [
+        {"content_type": "link", "content": {
+          "spaLink": "/tabs", "title" : "Load tabs page"
+        }},
+        {"content_type": "code", "content": {}}],
+      "content": {}
+    },
+    {
+    "id": "code",
+    "content_type": "code",
+    "items": [],
+    "content": {}
+  },
+  {
+    "id": "tabs",
+    "content_type": "page",
+      "items": [
+        {"content_type": "link", "content": {
+          "spaLink": "/code", "title" : "Load code page"
+        }},
+        {"content_type": "tabs", "content": {}}],
+      "content": {}
+  },
+  {
+    "id": "home",
+    "content_type": "page",
+      "items": [
+        {"content_type": "link", "content": {
+          "spaLink": "/code", "title" : "Load code page"
+        }},
+        {"content_type": "link", "content": {
+          "spaLink": "/tabs", "title" : "Load tabs page"
+        }}],
+      "content": {}
+  }]
+}

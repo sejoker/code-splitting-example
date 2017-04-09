@@ -1,13 +1,16 @@
 import React from "react";
 import { render } from "react-dom";
-import "./app.css";
-import "./button.css";
-import App from "./components/App";
-import fetchDependencies from "./modulesResolver";
-import { moduleCode, moduleTabs } from "./modules";
+import App from "./components/app/App";
+import Router from 'react-router/lib/Router';
+import Route from 'react-router/lib/Route';
+import useRouterHistory from 'react-router/lib/useRouterHistory';
+import createBrowserHistory from 'history/lib/createBrowserHistory';
 
-fetchDependencies([moduleCode, moduleTabs]).then(() => renderApp());
+const history = useRouterHistory(createBrowserHistory)();
+const app =(<Router history={history}>
+              <Route>
+                <Route name="all" component={App} path="*"/>
+              </Route>
+            </Router>);
 
-function renderApp() {
-  render(<App />, document.getElementById("root"));
-}
+render(app, document.getElementById("root"));
