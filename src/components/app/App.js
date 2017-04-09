@@ -10,14 +10,26 @@ export default class App extends Component {
     this.state = {
       modules: {}
     };
+
+    this.loadModules();
   }
 
-  componentDidMount() {
-    window.fetch(`http://localhost:3000/api${location.pathname}`)
+  componentWillReceiveProps(nextProps) {
+    const {routeParams: {splat: path}} = this.props;
+    const {routeParams: {splat: nextPath}} = nextProps;
+
+    if (nextPath && path !== nextPath) {
+      this.loadModules(nextPath);
+    }
+  }
+
+  loadModules(id) {
+    const {routeParams: {splat: path}} = this.props;
+
+    window.fetch(`http://localhost:3000/api/${id || path}`)
       .then(response => response.json())
       .then(modules => fetchDependencies([modules])
         .then(() => this.setState({ modules })));
-
   }
 
   render() {

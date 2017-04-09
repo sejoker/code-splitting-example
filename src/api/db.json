@@ -28,8 +28,14 @@
   },
   {
     "id": "home",
-    "content_type": "empty",
-    "items": [],
-    "content": {}
+    "content_type": "page",
+      "items": [
+        {"content_type": "link", "content": {
+          "spaLink": "/code", "title" : "Load code page"
+        }},
+        {"content_type": "link", "content": {
+          "spaLink": "/tabs", "title" : "Load tabs page"
+        }}],
+      "content": {}
   }]
 }
